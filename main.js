@@ -11,12 +11,6 @@ let currentSlide = 0;
 // Set up the slider
 
 function init() {
-  /*   
-    slideImage[0] = 0
-    slideImage[1] = 100%
-    slideImage[2] = 200%
-    */
-
   slideImage.forEach((img, i) => {
     img.style.left = i * 100 + "%";
   });
