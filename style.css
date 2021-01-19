@@ -143,6 +143,14 @@ a:hover {
   background: #eee;
 }
 
+
+
+/*genre display*/
+
+.genre{
+  padding: 10px;
+}
+
 .Genre-title{
   color: white;
 }
@@ -156,11 +164,19 @@ a:hover {
 
 .genre-grid-image{
   display: inline-flex;
-  width: 200px;
+  width: 300px;
+  opacity: 70%;
   position: relative;
 }
 
+.genre-grid-image:hover{
+  transition: 1s;
+  opacity: 100%;
+  align-items: center;
+}
+
 .genre-grid-image img{
+  position: sticky;
   width: inherit;
   height: auto;
 }
@@ -173,7 +189,7 @@ a:hover {
   height: auto;
   bottom: 0;
   background-color: black;
-  opacity: 50%;
+  opacity: 80%;
 }
 
 .genre-grid-image div:hover{
@@ -181,7 +197,9 @@ a:hover {
 }
 
 .genre-grid-image div p{
+  z-index: 2;
   color: white;
+  cursor: default;
 }
 
 
@@ -208,8 +226,9 @@ a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: yellow;
+  margin-left: -45px;
+  min-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
@@ -234,9 +253,10 @@ a:hover {
 }
 
 .search-bar input{
+  background-color: lightgray;
   margin: 5px;
-  width: 90%;
-  height: 30px;
+  width: 100%;
+  height: auto;
 }
 
 .search-bar button{
@@ -245,4 +265,41 @@ a:hover {
   height: 30px;
   background-color: yellow;
   color: black;
+}
+
+/*display-movies*/
+.display-movies{
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.movie-grid{
+  display: inline-flex;
+  width: 200px;
+  opacity: 70%;
+  position: relative;
+}
+
+.movie-grid >img{
+  position: sticky;
+  width: inherit;
+  height: auto;
+}
+
+.movie-grid >div{
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: inherit;
+  height: auto;
+  bottom: 0;
+  background-color: black;
+  opacity: 80%;
+}
+
+.movie-grid div p{
+  z-index: 2;
+  color: white;
+  cursor: default;
 }
